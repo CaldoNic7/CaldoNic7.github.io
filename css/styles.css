@@ -67,8 +67,8 @@
   --bs-body-bg: #fff;
 
   --marquee-width: 100vw;
-  --marquee-height: 20vh;
-  --marquee-elements-displayed: 7;
+  --marquee-height: 17vh;
+  --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);  
   
@@ -11657,10 +11657,9 @@ body {
   color: var(--text);
   overflow: hidden;
   position: relative;
-  margin: 0 auto;
-/*   border: 4px var(--accentDark) solid; */
   padding: 5px;
 }
+
 .marquee:before, .marquee:after {
   position: absolute;
   top: 0;
@@ -11710,16 +11709,34 @@ body {
     border-radius: 25px;
     padding: 10px;
 }
-@media (max-width: 600px) {
-  html { font-size: 12px; }
+@media (max-width: 800px) {
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
     --marquee-elements-displayed: 3;
   }
+
+  .marquee {
+    margin-top: 15rem;
+    margin-bottom: -22.5rem;
+  }
   .marquee:before, .marquee:after { width: 5rem; }
 }
 
+@media (max-width: 1100px) {
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 12vh;
+  }
+}
+
+@media (min-width: 2000px) {
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 7vh;
+    --marquee-elements-displayed: 7;
+  }
+}
 .projects-section {
   padding: 10rem 0;
 }
