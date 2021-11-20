@@ -11825,6 +11825,9 @@ body {
   color: #fff;
 }
 
+.calendly-inline-widget {
+  margin: 10px
+}
 .footer {
   padding: 5rem 0;
 }
